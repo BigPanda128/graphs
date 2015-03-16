@@ -106,29 +106,16 @@ function addEdge(v,w) {
 
 }
 
-function showGraph() {
-
-	 for (var i = 0; i < this.vertices; ++i) {
-
-		  write(this.vertexList[i] + " -> ");
-
-		   for (var j = 0; j < this.vertices; ++j) {
-
-			    if (this.adj[i][j] !== undefined) {
-
-				     var w = this.adj[i][j];
-
-				      write(this.vertexList[w] + ' ');
-
-				       }
-
-			     }
-
-		    print();
-
-		     }
-
-}
+function showGraph() {   
+	for (var i = 0; i < this.vertices; ++i) {      
+		write(i + " -> ");      
+		for (var j = 0; j < this.vertices; ++j) {         
+			if (this.adj[i][j] != undefined)            
+				write(this.adj[i][j] + ' ');      
+		}
+	      print();   
+	} 
+} 
 
 function dfs(v) {
 
