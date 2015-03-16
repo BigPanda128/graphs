@@ -155,7 +155,7 @@ function bfs(s) {
 
 		      if (v !== undefined) {
 
-			       console.log("Visited vertex: " + v);
+			       print("Visited vertex: " + v);
 
 			        }
 
