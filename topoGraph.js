@@ -1,4 +1,4 @@
-load("Graph.js");
+load("graph.js");
 g = new Graph(8);
 g.addEdge(0,3);
 g.addEdge(0,4);
