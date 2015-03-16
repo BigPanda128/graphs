@@ -18,6 +18,7 @@ var source = 0;
 
 var paths = g.pathTo(source,vertex);
 
-g.showPath(paths);
+print(paths);
+//g.showPath(paths);
 
 print("\n");
