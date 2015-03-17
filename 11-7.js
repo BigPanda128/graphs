@@ -18,7 +18,7 @@ g.vertexList = ["CS1", "CS2", "Data Structures",
 
 	  "Algorithms"];
 
-	  g.showGraph();
+	  g.newShowGraph();
 
 	  print();
 
