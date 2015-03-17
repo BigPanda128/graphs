@@ -18,6 +18,8 @@ function Graph(v) {
 
 	       this.showGraph = showGraph;
 
+	       this.newShowGraph = newShowGraph;
+
 	        this.dfs = dfs;
 
 		 this.marked = [];
@@ -39,6 +41,8 @@ function Graph(v) {
 		       this.topSortHelper = topSortHelper;
 
 		        this.topSort = topSort;
+
+			this.showPath = showPath;
 
 }
 
@@ -129,7 +133,7 @@ function dfs(v) {
 
 	   for (var i = 0; i < this.adj[v].length; i++) {
 
-		    var w = this.adj[v][w];
+		    var w = this.adj[v][i];
 
 		     if (!this.marked[w]) {
 
@@ -204,5 +208,49 @@ function pathTo(source, v) {
 	    path.push(source);
 
 	     return path;
+
+}
+
+function showPath(paths) {
+
+	 while (paths.length > 0) {
+
+		  if (paths.length > 1) {
+
+			   write(paths.pop() + '-');
+
+			    }
+
+		   else {
+
+			    write(paths.pop());
+
+			     }
+
+		    }
+
+}
+
+function newShowGraph() {
+
+	 for (var i = 0; i < this.vertices; ++i) {
+
+		  write(this.vertexList[i] + " -> ");
+
+		   for (var j = 0; j < this.vertices; ++j) {
+
+			    if (this.adj[i][j] !== undefined) {
+
+				     var w = this.adj[i][j];
+
+				      write(this.vertexList[w] + ' ');
+
+				       }
+
+			     }
+
+		    print();
+
+		     }
 
 }
