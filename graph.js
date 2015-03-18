@@ -43,6 +43,7 @@ function Graph(v) {
 		        this.topSort = topSort;
 
 			this.showPath = showPath;
+			this.showPathTown = showPathTown;
 
 }
 
@@ -211,23 +212,43 @@ function pathTo(source, v) {
 
 }
 
-function showPath(paths) {
+function showPathTown(paths) {
 
 	 while (paths.length > 0) {
 
 		  if (paths.length > 1) {
 
-			   write(paths.pop() + '-');
+			   write(this.vertexList[paths.pop()] + '-');
 
 			    }
 
 		   else {
 
-			    write(paths.pop());
+			    write(this.vertexList[paths.pop()]);
 
 			     }
 
 		    }
+
+}
+
+function showPath(paths) {
+
+         while (paths.length > 0) {
+
+                  if (paths.length > 1) {
+
+                           write(paths.pop() + '-');
+
+                            }
+
+                   else {
+
+                            write(paths.pop());
+
+                             }
+
+                    }
 
 }
 
