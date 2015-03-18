@@ -26,6 +26,10 @@ g.addEdge(6,7);
 g.addEdge(8,10);
 g.addEdge(9,10);
 
+g.vertexList = ["DeMotte", "Hebron", "Lowell", "Rensselaer",
+	"Valparasio", "Remington", "Kouts", "Wheatfield",
+	"Fair Oaks", "Shelby", "Roselawn"];
+
 function shortestPath(x,y) {
 	var vertex = y;
 	
@@ -35,9 +39,12 @@ function shortestPath(x,y) {
 
 	var paths = g.pathTo(source,vertex);
 
-	g.showPath(paths);
+	g.showPathTown(paths);
 
 	print("\n");
 }
+
+//g.showGraph();
+//g.newShowGraph();
 
 shortestPath(4,5);
